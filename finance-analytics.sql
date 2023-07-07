@@ -2,7 +2,7 @@
 
 
 
-### Module: User-Defined SQL Functions
+###  User-Defined SQL Functions
 
 -- a. first grab customer codes for Croma india
 	SELECT * FROM dim_customer WHERE customer like "%croma%" AND market="india";
@@ -35,7 +35,7 @@
 
 
 
-### Module: Gross Sales Report: Monthly Product Transactions
+###  Gross Sales Report: Monthly Product Transactions
 
 -- a. Perform joins to pull product information
 	SELECT s.date, s.product_code, p.product, p.variant, s.sold_quantity 
@@ -70,7 +70,7 @@
 
 
 
-### Module: Gross Sales Report: Total Sales Amount
+### Gross Sales Report: Total Sales Amount
 
 -- Generate monthly gross sales report for Croma India for all the years
 	SELECT 
@@ -85,7 +85,7 @@
 
 
 
-### Module: Stored Procedures: Monthly Gross Sales Report
+###  Stored Procedures: Monthly Gross Sales Report
 
 -- Generate monthly gross sales report for any customer using stored procedure
 	CREATE PROCEDURE `get_monthly_gross_sales_for_customer`(
@@ -108,7 +108,7 @@
 
 
 
-### Module: Stored Procedure: Market Badge
+###  Stored Procedure: Market Badge
 
 --  Write a stored proc that can retrieve market badge. i.e. if total sold quantity > 5 million that market is considered "Gold" else "Silver"
 	CREATE PROCEDURE `get_market_badge`(
